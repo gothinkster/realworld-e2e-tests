@@ -1,0 +1,17 @@
+{
+  "baseUrl": "https://demo.realworld.io/#/",
+  "viewportWidth": 1200,
+  "chromeWebSecurity": false,
+  "modifyObstructiveCode": false,
+  "video": false,
+  "watchForFileChanges": false,
+  "numTestsKeptInMemory": 5,
+  "defaultCommandTimeout": 10000,
+  "requestTimeout": 10000,
+  "pageLoadTimeout": 180000,
+  "scrollBehavior": "center",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
+}
