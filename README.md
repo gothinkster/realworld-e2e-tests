@@ -1,5 +1,7 @@
 # realworld-e2e-tests
 
+[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/) [![End-to-end tests](https://github.com/gothinkster/realworld-e2e-tests/actions/workflows/cypress-workflow.yml/badge.svg)](https://github.com/gothinkster/realworld-e2e-tests/actions/workflows/cypress-workflow.yml)
+
 ## Test reports
 
 Multiple test reports are set up for the Cypress tests.

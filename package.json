@@ -9,7 +9,7 @@
     "report:generate": "marge cypress/results/mochawesome-bundle.json -o cypress/reports/html",
     "report:copyScreenshots": "cp -r cypress/screenshots cypress/reports/html/screenshots",
     "report:all": "yarn report:merge && yarn report:generate && yarn report:copyScreenshots",
-    "report:ci": "yarn report:merge && yarn report:generate",
+    "report:action": "yarn report:merge && yarn report:generate",
     "pre:run": "rm -rf cypress/screenshots cypress/results cypress/reports cypress/videos"
   },
   "devDependencies": {
