@@ -4,6 +4,7 @@
   "description": "Cypress tests",
   "main": "index.js",
   "scripts": {
+    "cy:open": "cypress open",
     "cy:run": "cypress run --browser chrome --headless",
     "report:merge": "mochawesome-merge 'cypress/results/json/*.json' > cypress/results/mochawesome-bundle.json",
     "report:generate": "marge cypress/results/mochawesome-bundle.json -o cypress/reports/html",
