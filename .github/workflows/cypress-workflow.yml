@@ -1,0 +1,39 @@
+name: realworld-e2e-tests
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+jobs:
+  cypress-run:
+    runs-on: ubuntu-20.04
+    name: Checkout
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v2
+      - name: Generate HTML report
+        run: yarn report:action
+      # after the test run completes
+      # store videos and any screenshots
+      # NOTE: screenshots will be generated only if E2E test failed
+      # thus we store screenshots only on failures
+      # Alternative: create and commit an empty cypress/screenshots folder
+      # to always have something to upload
+      - name: Copy screenshots
+        if: failure()
+        run: yarn report:copyScreenshots
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-reports
+          path: cypress/reports
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-results
+          path: cypress/results

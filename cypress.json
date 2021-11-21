@@ -1,0 +1,10 @@
+{
+  "baseUrl": "https://demo.realworld.io/#/",
+  "viewportWidth": 1200,
+  "video": false,
+  "scrollBehavior": "center",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
+}

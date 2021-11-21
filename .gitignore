@@ -1,0 +1,8 @@
+node_modules
+node_modules/**/*
+
+/cypress/results
+/cypress/screenshots
+/cypress/reports
+/cypress/videos
+/cypress-logs
