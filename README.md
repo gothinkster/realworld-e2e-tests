@@ -7,6 +7,12 @@ This repo aims to implement UI tests, similar to those described here:
 - https://gothinkster.github.io/realworld/docs/specs/backend-specs/introduction/
 - https://github.com/gothinkster/realworld/tree/main/api
 
+Oddly, the tests mostly won't hit a real API for the time being.
+
+This is because the Gothinkster org would need to setup a way to seed data from the frontend test runner and we don't have that yet.
+
+So, since the API spec is well defined [here](https://gothinkster.github.io/realworld/docs/specs/backend-specs/endpoints), every API response will be stubbed instead.
+
 ## Setup
 
 ```bash
