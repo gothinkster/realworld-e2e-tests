@@ -25,7 +25,7 @@ function stubFailure(cy) {
         },
         {
             statusCode: 403,
-            body: {"errors": {"Your email or password": ["is invalid"]}}
+            body: {"errors": {"email or password": ["is invalid"]}}
         }
     ).as('loginFailure');
 }
@@ -45,7 +45,7 @@ describe("SignIn Form", () => {
             cy.get("input[placeholder=Password]").type(params.password + '{ENTER}');
 
             cy.location('hash').should('eq', '#/login');
-            cy.contains('Your email or password is invalid');
+            cy.contains('email or password is invalid');
         });
 
     });
