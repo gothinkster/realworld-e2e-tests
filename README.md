@@ -2,7 +2,22 @@
 
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/) [![End-to-end tests](https://github.com/gothinkster/realworld-e2e-tests/actions/workflows/cypress-workflow.yml/badge.svg)](https://github.com/gothinkster/realworld-e2e-tests/actions/workflows/cypress-workflow.yml)
 
-## Test reports
+This repo aims to implement UI tests, similar to those described here:
+
+- https://gothinkster.github.io/realworld/docs/specs/backend-specs/introduction/
+- https://github.com/gothinkster/realworld/tree/main/api
+
+## Setup
+
+```bash
+yarn install
+yarn cy:open # run interactive
+yarn cy:run # run headless
+
+yarn report:all # for GUI output. Then open ./cypress/reports/html/mochawesome-bundle.html  
+```
+
+## Test report outputs
 
 Multiple test reports are set up for the Cypress tests.
 
@@ -12,6 +27,6 @@ Multiple test reports are set up for the Cypress tests.
 - MochAwesome HTML report. Report is build with `yarn report:all` and you can find it locally under `cypress/reports/html/mochawesome-bundle.html`
   ![HTML test report](./assets/htmlReport.jpg)
 
-- During a test run for each test spec Xml files are created under `dylan/data/test/cypress/results`.
+- During a test run for each test spec Xml files are created under `./test/cypress/results`.
 
 Under `reporter-config.json` you can find all settings for the test report. More information to the reporter options are [here](https://docs.cypress.io/guides/tooling/reporters.html).
